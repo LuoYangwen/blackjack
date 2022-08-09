@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url(resource/bg.jpg);
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: top center;
+        }
+        
+        table {
+            margin: auto;
+            width: 1000px;
+            /* border: 1px solid black; */
+        }
+        
+        table td {
+            /* border: 1px solid black; */
+            text-align: center;
+            margin: 0px;
+            padding: 0px;
+            width: 100px;
+        }
+        
+        span {
+            font-size: 50px;
+        }
+        
+        #tableboard tr td {
+            height: 130;
+        }
+        
+        input {
+            height: 40px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <!--標題-->
+    <table style="height: 300px;">
+        <tr style="height: 200px;"></tr>
+        <tr style="height: 100px;">
+            <td>
+                <span>Black Jack</span>
+            </td>
+        </tr>
+    </table>
+
+    <!-- 手牌 -->
+    <table id="tableboard">
+        <tr>
+            <td id="player1"><img width="80px" height="100px" src="resource/computer.png"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td id="player2"><img width="80px" height="100px" src="resource/player.png"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <!-- 計分及按鈕 -->
+    <table style="color:yellow;font-size: 30px;">
+        <tr>
+            <td>
+                <div id="score"></div>
+                <!-- 顯示分數的位置 -->
+            </td>
+            <td style="height: 150px;">
+                <div id="bulletin">請做出選擇</div>
+                <!--顯示目前狀態-->
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="button" id="hit" value="加牌(HIT)" onclick="hit();" />
+                <input type="button" id="stand" value="我不要了(STAND)" onclick="stand();" />
+                <input type="button" id="restart" value="在玩一局" onclick="restart();" />
+                <input type="button" value="在玩一局：重新整理" onclick="location.reload();" />
+            </td>
+        </tr>
+    </table>
+    <script src="black_jack.js"></script>
+</body>
+
+</html>
